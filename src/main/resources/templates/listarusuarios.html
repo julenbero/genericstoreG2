@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html xmlns:th="https://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Listado de Usuarios</title>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
+			<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
+			<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
+			<li id="item"><a th:href="@{/productos}"> Productos</a></li>
+			<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
+			<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
+		</ul>
+	</div>
+	<div>
+		<table class="table">
+			<thead style="background-color: #5BA5EA">
+				<tr>
+					<th>Cedula</th>
+					<th>Nombre Completo</th>
+					<th>Correo Electronico</th>
+					<th>Usuario</th>
+					<th>Password</th>
+					<th>Accion</th>
+				</tr>
+			</thead>
+			<tbody>
+				<tr th:each="usuariores:${usuarios}">
+					<td th:text="${usuariores.cedula_usuario}"></td>
+					<td th:text="${usuariores.nombre_usuario}"></td>
+					<td th:text="${usuariores.email_usuario}"></td>
+					<td th:text="${usuariores.usuario}"></td>
+					<td th:text="${usuariores.password}"></td>
+					<td><a th:href="@{/editarusuario/}+${usuariores.cedula_usuario}">Editar</a>
+					</td>
+				</tr>
+			</tbody>
+		</table>
+	</div>
+</body>
+</html>
