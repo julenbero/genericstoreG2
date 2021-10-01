@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+	<div id="menu">
+		<ul>
+			<li id="item"><a th:href="@{/usuarios}">Usuarios</a></li>
+			<li id="item"><a th:href="@{/clientes}">Clientes</a></li>
+			<li id="item"><a th:href="@{/proveedores}"> Proveedores</a></li>
+			<li id="item"><a th:href="@{/productos}"> Productos</a></li>
+			<li id="item"><a th:href="@{/ventas}"> Ventas</a></li>
+			<li id="item"><a th:href="@{/reportes}"> Reportes</a></li>
+		</ul>
+	</div>
+	<div>
+		<form action="">
+			<div>
+				<label for="nit">NIT</label> <input type="number" name="nit" id="">
+				<label for="telefono">Telefono</label> <input type="number"
+					name="telefono" id="">
+			</div>
+			<div>
+				<label for="nproveedor">Nombre Proveedor</label> <input type="text"
+					name="nproveedor" id=""> <label for="ciudad">Ciudad</label>
+				<input type="text" name="ciudad" id="">
+			</div>
+			<div>
+				<label for="direccion">Direccion</label> <input type="text"
+					name="direccion" id="">
+			</div>
+			<br>
+			<div>
+				<input type="submit" value="Consultar"> <input type="submit"
+					value="Crear"> <input type="submit" value="Actualizar">
+				<input type="submit" value="Borrar">
+			</div>
+		</form>
+	</div>
+</body>
+</html>
